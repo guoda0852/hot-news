@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>热榜聚合 · 各平台热搜一页看完</title>
+<meta name="description" content="聚合微博、百度、今日头条、B站、V2EX、少数派、Hacker News 热榜，每 30 分钟自动更新。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <h1>🔥 热榜聚合</h1>
+    <p class="subtitle">各平台热搜，一页看完 · <span id="update-time">加载中…</span>更新</p>
+  </div>
+</header>
+
+<nav class="tabs wrap" id="tabs"></nav>
+
+<div class="wrap toolbar">
+  <input id="filter" type="search" placeholder="筛选关键词…" autocomplete="off">
+</div>
+
+<main class="wrap">
+  <ol class="news-list" id="news-list"></ol>
+  <p class="empty hidden" id="empty">没有匹配的结果，换个关键词试试。</p>
+</main>
+
+<footer class="wrap footer">
+  <p>数据每 30 分钟由 GitHub Actions 自动抓取更新 · 仅聚合公开热榜标题，内容归各平台所有</p>
+  <p><a href="https://github.com/guoda0852/hot-news" target="_blank" rel="noopener">GitHub 仓库</a></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
